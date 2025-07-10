@@ -1,0 +1,59 @@
+.circle {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s;
+  animation: roll 5s linear infinite;
+}
+
+.circle:hover {
+  opacity: 0;
+}
+
+.loading {
+  position: relative;
+  width: 350px;
+  height: 100px;
+  background-color: #eee;
+  margin-top: 200px;
+  border: 2px solid greenyellow;
+}
+.loading span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background-color: greenyellow;
+  animation: load 5s linear infinite;
+}
+
+@keyframes roll {
+  0%, 100% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: calc(100vw - 150px);
+  }
+  50% {
+    top: calc(100vh - 150px);
+    left: calc(100vw - 150px);
+  }
+  75% {
+    top: calc(100vh - 150px);
+    left: 0;
+  }
+}
+@keyframes load {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
